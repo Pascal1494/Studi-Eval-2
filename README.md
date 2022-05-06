@@ -1,7 +1,7 @@
 # Evaluation Sudi: Dynamiser un site web avac javascript !
 
 
-##Le visuel est imposé par STUDI.
+Le visuel est imposé par STUDI.
 ## Il doit ressembler à ceci : 
 <br>
 
