@@ -100,6 +100,9 @@ body {
 }
 /* End Score, text and background players / active as inactive*/
 
+
+/*Active Player*/
+
 .active {
   background-color: #6a6a6a72;
 }
@@ -116,10 +119,10 @@ body {
   right: 10px;
 }
 
-/* Fin Joueur actif */ 
+/* End Active Player*/ 
 
 
-/* Joueur gagnat */
+/* Winner */
 
 .winner {
   background-color: #8f9b12;
@@ -129,10 +132,10 @@ body {
   color: #75eb4d;
 }
 
-/* Fin joueur gagnant */
+/* End Winner */
 
 
-/* Boutons */
+/* Buttons */
 
 button {
   display: flex;
@@ -163,7 +166,7 @@ button:focus {
   outline: none;
 } 
 
-/* style icônes des boutons*/ 
+/* style icôns buttons*/ 
 i {
 color: #eb4d4d;
 font-size: 120%;
@@ -172,11 +175,7 @@ padding: 5px;
 /* border: 2px solid black; */
 }
 
-/* .bi-plus-circle {
-color: aqua;
-height: 50px;
-width: 50px;
-} */
+
 
 /*Bouton new game*/
 
@@ -199,10 +198,10 @@ width: 50px;
   top: 80%;
 }
 
-/* Fin boutons */ 
+/* End buttons */ 
 
 
-/* Le dé */ 
+/* The dice */ 
 .dice {
   position: absolute;
   left: 50%;
