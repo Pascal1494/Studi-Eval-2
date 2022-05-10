@@ -4,47 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./asset/css/styles.css">
+    <link rel="stylesheet" href="./asset/css/styles.css" />
     <title>Evaluation N°2 - Dynamiser vos sites web avec Javascript</title>
   </head>
   <body>
     <h1>Evaluation N°2 - Dynamiser vos sites web avec Javascript</h1>
 
-     <!--Div principale 'wrapper' contenant les cases des deux joueurs-->
-     <div class="wrapper">
-        <!--Panel joueur 1 (Défini sous le 0 pour une interpreation javascript plus adéquat)-->
-        <!--Une classe a été également défini par défaut pour pouvoir ensuite la déplacer/ la switcher de panel selon le joueur actuellement actif-->
-        <section class="player-0-panel active">
-          <div class="player-name" id="name-0">Player 1</div>
-          <div class="player-score" id="score-0">0</div>
-          <div class="player-current-box">
-            <div class="player-current-label">Current</div>
-            <div class="player-current-score" id="actual-0">0</div>
-          </div>
-        </section>
-  
-        <!--section joueur 2-->
-        <section class="player-1-panel">
-          <div class="player-name" id="name-1">Player 2</div>
-          <div class="player-score" id="score-1">0</div>
-          <div class="player-current-box">
-            <div class="player-current-label">Current</div>
-            <div class="player-current-score" id="actual-1">0</div>
-          </div>
-        </section>
-  
-        <!--Section des boutons jeu, mise en poche et addition des gains -->
-        <button class="btn btn-new">
-          <i class="bi bi-plus-circle"></i>New game
-        </button>
-        <button class="btn btn-roll">
-          <i class="bi bi-arrow-repeat"></i> Roll dice
-        </button>
-        <button class="btn btn-hold">
-          <i class="bi bi-box-arrow-in-down"></i> Hold
-        </button>
-        <img src="assets/dice-5.png" class="dice" />
-      </div>
+    <!--Div principale 'wrapper' contenant les cases des deux joueurs-->
+    <main class="wrapper">
+      <!--Panel joueur 1 (Défini sous le 0 pour une interpreation javascript plus adéquat)-->
+      <!--Une classe a été également défini par défaut pour pouvoir ensuite la déplacer/ la switcher de panel selon le joueur actuellement actif-->
+      <section class="player-0-panel active">
+        <div class="player-name" id="name-0">Player 1</div>
+        <div class="player-score" id="score-0">0</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="actual-0">0</div>
+        </div>
+      </section>
+
+      <!--section joueur 2-->
+      <section class="player-1-panel">
+        <div class="player-name" id="name-1">Player 2</div>
+        <div class="player-score" id="score-1">0</div>
+        <div class="player-current-box">
+          <div class="player-current-label">Current</div>
+          <div class="player-current-score" id="actual-1">0</div>
+        </div>
+      </section>
+    </main>
+
+    <!--Section des boutons jeu, mise en poche et addition des gains -->
+    <button class="btn btn-new">
+      <i class="bi bi-plus-circle"></i>New game
+    </button>
+    <button class="btn btn-roll">
+      <i class="bi bi-arrow-repeat"></i> Roll dice
+    </button>
+    <button class="btn btn-hold">
+      <i class="bi bi-box-arrow-in-down"></i> Hold
+    </button>
+    <img src="assets/dice-5.png" class="dice" />
 
     <script src="./asset/js/script.js"></script>
   </body>

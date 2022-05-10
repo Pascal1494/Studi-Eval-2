@@ -1,4 +1,4 @@
-/*body et stylage général */
+/*body */
 
 * {
   margin: 0;
@@ -40,11 +40,11 @@ body {
   border-radius: 15px;
 }
 
-/* fin body et général */
+/* End body */
 
-/* case joueurs */
+/* Player Case */
 
-/* Réglage des panneaux joueurs 1 et 2 */ 
+/* Adjusting Player Panels 1 et 2 */ 
 .player-0-panel,
   .player-1-panel {
     width: 50%;
@@ -52,9 +52,9 @@ body {
     padding: 100px;
   }
 
-/* Fin case joueurs */
+/* End players panels */
 
-/* Fin Score, texte et background joueurs / actif comme inactif */
+/* Score, text and background players / active as inactive*/
 .player-name {
   font-size: 4rem;
   text-align: center;
@@ -98,5 +98,115 @@ body {
 .player-current-score {
   font-size: 30px;
 }
-/* Fin Score, texte et background joueurs / actif comme inactif */
+/* End Score, text and background players / active as inactive*/
 
+.active {
+  background-color: #6a6a6a72;
+}
+.active .player-name {
+  font-weight: 300;
+}
+
+.active .player-name::after {
+  content: "\2022";
+  font-size: 50px;
+  position: absolute;
+  color: #eb4d4d;
+  top: 7px;
+  right: 10px;
+}
+
+/* Fin Joueur actif */ 
+
+
+/* Joueur gagnat */
+
+.winner {
+  background-color: #8f9b12;
+}
+.winner .player-name {
+  font-weight: 300;
+  color: #75eb4d;
+}
+
+/* Fin joueur gagnant */
+
+
+/* Boutons */
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #555;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  font-weight: 600;
+}
+
+
+button:focus {
+  outline: none;
+} 
+
+/* style icônes des boutons*/ 
+i {
+color: #eb4d4d;
+font-size: 120%;
+margin-right: 7px;
+padding: 5px;
+/* border: 2px solid black; */
+}
+
+/* .bi-plus-circle {
+color: aqua;
+height: 50px;
+width: 50px;
+} */
+
+/*Bouton new game*/
+
+.btn-new {
+  top: 10%;
+}
+
+
+
+/*Bouton Roll pour le dé*/ 
+
+.btn-roll {
+  top: 68%;
+}
+
+
+/*Bouton hold*/
+
+.btn-hold {
+  top: 80%;
+}
+
+/* Fin boutons */ 
+
+
+/* Le dé */ 
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 25vh;
+  transform: translateX(-50%);
+  height: 100px;
+}
