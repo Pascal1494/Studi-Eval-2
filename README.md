@@ -1,4 +1,4 @@
-# Evaluation Sudi: Dynamiser un site web avac javascript !
+# Evaluation Studi: Dynamiser un site web avac javascript !
 
 
 Le visuel est imposé par STUDI.
