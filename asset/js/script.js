@@ -6,6 +6,11 @@ let scoreBoard;
 let scores;
 let activePlayer;
 
+//Music const
+const diceSong = new Audio("asset/sound/dice3.wav");
+const holdSong = new Audio("asset/sound/hold.wav");
+const winSong = new Audio("asset/sound/win.mp3");
+
 init();
 
 function init() {
@@ -16,8 +21,8 @@ function init() {
   activePlayer = 0;
 
   //Scores update
-  document.getElementById("name-0").innerText = "Joueur 1";
-  document.getElementById("name-1").innerText = "Joueur 2";
+  document.getElementById("name-0").innerText = "Player 1";
+  document.getElementById("name-1").innerText = "Player 2";
   document.getElementById("actual-0").innerText = "0";
   document.getElementById("actual-1").innerText = "0";
   document.getElementById("score-0").innerText = "0";
@@ -39,12 +44,13 @@ function init() {
 function changePlayer() {
   //reset current score
   scoreBoard = 0;
-
+  holdSong.play();
+  
   document.getElementById("actual-" + activePlayer).innerText = scoreBoard;
-
+  
   //réinitialization active Player
   activePlayer == 0 ? (activePlayer = 1) : (activePlayer = 0);
-
+  
   //Display the dice
   document.querySelector(".dice").style.display = "none";
   //
@@ -60,6 +66,7 @@ function changePlayer() {
 document.querySelector(".btn-roll").addEventListener("click", () => {
   if (playing) {
     let dice = Math.floor(Math.random() * 6 + 1);
+    diceSong.play();
 
     //Si ce n'est pas = 1
     if (dice != 1) {
@@ -85,6 +92,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     scores[activePlayer] += scoreBoard;
     document.getElementById("score-" + activePlayer).innerText =
       scores[activePlayer];
+
     //Si le joueur actif arrive à 100 ou plus, il gagne
     if (scores[activePlayer] >= 100) {
       document
@@ -93,6 +101,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
 
       //Display of the winner's message
       document.getElementById("name-" + activePlayer).innerText = "Gagnant !";
+      winSong.play();
       //arrêt de partie
       playing = false;
     } else {
