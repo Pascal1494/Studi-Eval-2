@@ -44,13 +44,13 @@ function init() {
 function changePlayer() {
   //reset current score
   scoreBoard = 0;
-  holdSong.play();
-  
+
   document.getElementById("actual-" + activePlayer).innerText = scoreBoard;
-  
+  // holdSong.play();
+
   //réinitialization active Player
   activePlayer == 0 ? (activePlayer = 1) : (activePlayer = 0);
-  
+
   //Display the dice
   document.querySelector(".dice").style.display = "none";
   //
@@ -92,6 +92,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     scores[activePlayer] += scoreBoard;
     document.getElementById("score-" + activePlayer).innerText =
       scores[activePlayer];
+      holdSong.play();
 
     //Si le joueur actif arrive à 100 ou plus, il gagne
     if (scores[activePlayer] >= 100) {
