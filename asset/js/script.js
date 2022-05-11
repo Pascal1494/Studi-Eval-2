@@ -8,10 +8,15 @@ let activePlayer;
 
 //Music const
 const diceSong = new Audio("asset/sound/dice3.wav");
-const holdSong = new Audio("asset/sound/hold.wav");
+const holdSong = new Audio("asset/sound/Coin.wav");
 const winSong = new Audio("asset/sound/win.mp3");
 const startSong = new Audio("asset/sound/Jingle-sncf.wav");
 const looseSong = new Audio("asset/sound/percut.wav");
+
+
+
+
+
 
 init();
 

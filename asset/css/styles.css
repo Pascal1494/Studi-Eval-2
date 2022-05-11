@@ -24,6 +24,12 @@ body {
   color: #555;
 }
 
+.title {
+  text-align: center;
+  padding: 60px;
+  color: #fff;
+  text-transform: uppercase;
+}
 .wrapper {
   display: flex;
   justify-content: center;
@@ -105,6 +111,7 @@ body {
 
 .active {
   background-color: #6a6a6a72;
+  transition: 1.2s ease-in-out;
 }
 .active .player-name {
   font-weight: 300;
@@ -112,11 +119,11 @@ body {
 
 .active .player-name::after {
   content: "\2022";
-  font-size: 50px;
+  font-size: 60px;
   position: absolute;
   color: #eb4d4d;
-  top: 7px;
-  right: 10px;
+  
+  left: 38vh;
 }
 
 /* End Active Player*/ 
@@ -125,11 +132,13 @@ body {
 /* Winner */
 
 .winner {
-  background-color: #a09da9;
+  background: url(../img/Trophyop.png) no-repeat center/cover;
+  
 }
 .winner .player-name {
   font-weight: 300;
   color: #eb4d4d;
+ 
 
 }
 
@@ -167,7 +176,7 @@ button:focus {
   outline: none;
 } 
 
-/* style icôns buttons*/ 
+/* Style icôns buttons*/ 
 i {
 color: #eb4d4d;
 font-size: 120%;
@@ -175,6 +184,7 @@ margin-right: 7px;
 padding: 5px;
 /* border: 2px solid black; */
 }
+
 
 
 
@@ -186,14 +196,14 @@ padding: 5px;
 
 
 
-/*Bouton Roll pour le dé*/ 
+/* Roll dice button */ 
 
 .btn-roll {
   top: 68%;
 }
 
 
-/*Bouton hold*/
+/* Hold button*/
 
 .btn-hold {
   top: 80%;
