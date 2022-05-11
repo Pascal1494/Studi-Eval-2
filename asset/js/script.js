@@ -10,6 +10,8 @@ let activePlayer;
 const diceSong = new Audio("asset/sound/dice3.wav");
 const holdSong = new Audio("asset/sound/hold.wav");
 const winSong = new Audio("asset/sound/win.mp3");
+const startSong = new Audio("asset/sound/Jingle-sncf.wav");
+const looseSong = new Audio("asset/sound/percut.wav");
 
 init();
 
@@ -77,7 +79,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
       document.querySelector(".dice").src = "asset/img/dice-" + dice + ".png";
     } else {
       //Next player
-
+      looseSong.play();
       changePlayer();
       document.querySelector(".dice").style.display = "block";
       document.querySelector(".dice").src = "asset/img/dice-" + dice + ".png";
@@ -92,7 +94,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     scores[activePlayer] += scoreBoard;
     document.getElementById("score-" + activePlayer).innerText =
       scores[activePlayer];
-      holdSong.play();
+    holdSong.play();
 
     //Si le joueur actif arrive à 100 ou plus, il gagne
     if (scores[activePlayer] >= 100) {
@@ -101,7 +103,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
         .classList.add("winner");
 
       //Display of the winner's message
-      document.getElementById("name-" + activePlayer).innerText = "Gagnant !";
+      document.getElementById("name-" + activePlayer).innerText = "Winner !";
       winSong.play();
       //arrêt de partie
       playing = false;
@@ -115,4 +117,5 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
 //New game /
 document.querySelector(".btn-new").addEventListener("click", () => {
   init();
+  startSong.play();
 });
