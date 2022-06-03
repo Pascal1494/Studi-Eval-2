@@ -15,6 +15,7 @@ body {
     url(../img/dice\ background.jpg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   
   font-family: Lato;
   font-weight: 300;
@@ -110,7 +111,7 @@ body {
 /*Active Player*/
 
 .active {
-  background-color: #6a6a6a72;
+  background-color: #e8bfbf;
   transition: 1.2s ease-in-out;
 }
 .active .player-name {
@@ -220,4 +221,76 @@ padding: 5px;
   transform: translateX(-50%);
   height: 100px;
 }
+
+
+/* @media screen and (max-width: 1300px){
+  /* .wrapper {
+    flex-direction: column;
+  } 
+  
+  .player-0-panel,
+  .player-1-panel {
+    width: 85%;
+    height: 50%;
+    padding: 50px;
+  }
+} */
+
+/* @media screen and (max-width: 550px){
+  .wrapper {
+    flex-direction: column; 
+      width: 60%;
+  }
+  body {
+    transform: rotate(90deg);
+  }
+
+  .player-0-panel,
+  .player-1-panel {
+    width: 25%;
+    height: 50%;
+    padding: 50px;
+  }
+} */
+
+@media screen and (max-width: 800px){
+ html {
+   overflow: auto;
+ }
+  .title {
+    display: none;
+  }
+  .wrapper {
+    flex-direction: column;
+      width: 60%;
+      height: 90vh;
+  }
+  
+
+  .player-0-panel,
+  .player-1-panel {
+    /* width: 25%;
+    height: 50%; */
+    padding: 10px;
+    height: 45vh;
+  }
+}
+
+
+
+/* @media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (orientation: portrait) {
+  body {
+    transform: rotate(90deg);
+  
+  }
+ 
+} */
+  
+
+
+
+
 

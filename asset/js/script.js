@@ -13,11 +13,6 @@ const winSong = new Audio("asset/sound/win.mp3");
 const startSong = new Audio("asset/sound/Jingle-sncf.wav");
 const looseSong = new Audio("asset/sound/percut.wav");
 
-
-
-
-
-
 init();
 
 function init() {
@@ -124,3 +119,4 @@ document.querySelector(".btn-new").addEventListener("click", () => {
   init();
   startSong.play();
 });
+
