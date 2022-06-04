@@ -257,6 +257,9 @@ padding: 5px;
  html {
    overflow: auto;
  }
+ body {
+   z-index: -10;
+ }
   .title {
     display: none;
   }
@@ -265,15 +268,87 @@ padding: 5px;
       width: 60%;
       height: 90vh;
   }
+
+  .player-current-box {
+    background-color: #eb4d4d;
+    color: #fff;
+    width: 40%;
+    margin: -90px auto;
+    /* padding: 12px; */
+    text-align: center;
+    border-radius: 15px;
+  }
+  .player-current-score {
+    font-size: 2.5em;
+  }
   
+  .player-score {
+    font-size: 1.5rem;
+  }
 
   .player-0-panel,
   .player-1-panel {
-    /* width: 25%;
-    height: 50%; */
+    width:100%;
+     /*   height: 50%; */
     padding: 10px;
     height: 45vh;
   }
+
+  .player-name {
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .player-name::after {
+  left: 20vh;
+    top:-24px;
+    font-size: 20px;
+  }
+  
+  .player-current-label {
+    font-size: 1rem;
+
+  }
+  .btn {
+    font-size: 18px;
+    font-weight: bold;
+  }
+.btn-new {
+  position: absolute;
+  top: 3%;
+  left: 23%;
+}
+
+
+
+/* Roll dice button */ 
+
+.btn-roll {
+  top: 96%;
+  left: 22%;
+}
+
+
+/* Hold button*/
+
+.btn-hold {
+  top: 96%;
+  left: 78%;
+}
+
+.dice {
+  left:50%;
+  z-index: 20;
+  height: 10%;
+  top: 40vh;
+}
+
 }
 
 
