@@ -29,7 +29,11 @@
     z-index: 0;
   }
   .title {
-      display: none;
+      /* display: none; */
+      text-align: center;
+      color: whitesmoke;
+      margin-top: 10px;
+      margin-bottom: -30px;
   }
   .wrapper {
     display: flex;
@@ -92,7 +96,7 @@
     background-color: #eb4d4d;
     color: #fff;
     width: 55%;
-    margin: 20px auto;
+    margin: 25px auto;
     padding: 12px;
     text-align: center;
     border-radius: 15px;
@@ -199,7 +203,8 @@ i {
   /*Bouton new game*/
 
   .btn-new {
-    top: 97%;
+    top: 3%;
+    left: 15%;
     /* color: #fff; */
     /* background-color: #222; */
     z-index: 200;
@@ -232,13 +237,13 @@ i {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    height: 50px;
+    height: 75px;
   }
 
 
 /* Media-query Pc Screen */
 
-@media all and (min-width: 1024px) and (max-width: 3000px){
+@media all and (min-width: 1200px) and (max-width: 2000px){
     .title {
       display: block;
       text-align: center;
@@ -253,11 +258,57 @@ i {
         height: 80%;
     }
     .player-name {
-        font-size: 3.2rem;
+     
+      height: 50%;
+      font-size: 3.2rem;
     }
-    .player-name::after {
-        height: 150px;
+
+    .player-score {
+      position: relative;
+      top:-40%;
+      font-size: 5rem;
+     
     }
+
+    .player-current-box {
+      height: 130px;
+    }
+
+    .player-current-label {
+      font-size: 2rem;
+    }
+
+    .player-current-score {
+      font-size: 2.5rem;
+    }
+    
+    .player-0-panel, 
+    .player-1-panel {
+      justify-content: center;
+      align-items: center;
+    }
+    .active .player-name::after  {
+      background-size: 100%;
+      top: -3%;
+    }
+
+    .btn {
+      font-size: 1.5rem;
+    }
+    .btn-new {
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+    .btn-hold, .btn-roll {
+      top: 95%;
+    }
+
+    .dice {
+      height: 100px;
+    }
+
+
 
 }
 
