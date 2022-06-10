@@ -308,8 +308,22 @@ i {
       height: 100px;
     }
 
-
-
 }
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .btn-new {
+    top: 30px;
+    left: 50%;
+  }
+
+  .btn-hold,
+  .btn-roll {
+    top: 90%;
+  }
+  }
 
 
