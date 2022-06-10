@@ -327,3 +327,10 @@ i {
   }
 
 
+  @media only screen and (max-height: 888px) and  (orientation: landscape){
+    .wrapper {
+      flex-direction: row;
+    }
+  }
+
+
