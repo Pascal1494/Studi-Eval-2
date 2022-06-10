@@ -48,7 +48,7 @@ function changePlayer() {
   scoreBoard = 0;
 
   document.getElementById("actual-" + activePlayer).innerText = scoreBoard;
-  // holdSong.play();
+  
 
   //réinitialization active Player
   activePlayer == 0 ? (activePlayer = 1) : (activePlayer = 0);
