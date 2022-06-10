@@ -1,0 +1,264 @@
+/*body */
+
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    /* color: rgb(243, 9, 9); */
+
+  }
+  
+  body {
+    background-image: linear-gradient(
+        rgba(9, 9, 9, 0.4),
+        rgba(216, 18, 180, 0.777)
+      ),
+      url(../img/dice\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    font-family: Lato;
+    font-weight: 300;
+    
+    /* position: relative; */
+    height: 100vh;
+    color: #555;
+    z-index: 0;
+  }
+  .title {
+      display: none;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.525);
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  
+    border-radius: 15px;
+  }
+
+  /* End body */
+
+/* Player Case */
+
+/* Adjusting Player Panels 1 et 2 */ 
+.player-0-panel,
+.player-1-panel {
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+
+}
+
+
+/* End players panels */
+
+/* Score, text and background players / active as inactive*/
+.player-name {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 7px;
+    position: relative;
+  }
+  .player-name::after {
+    border: 1pxsolid red
+  }
+  
+  .player-score {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #eb4d4d;
+    /* margin-bottom: 130px; */
+  }
+
+  .player-current-box {
+    background-color: #eb4d4d;
+    color: #fff;
+    width: 55%;
+    margin: 20px auto;
+    padding: 12px;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  .player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #222;
+  }
+
+  .player-current-score {
+    font-size: 20px;
+  }
+  /* End Score, text and background players / active as inactive*/
+  /*Active Player*/
+
+.active {
+    background-color: #e8bfbf;
+    transition: 1.2s ease-in-out;
+  }
+
+  .active .player-name {
+    font-weight: 300;
+}
+
+.active .player-name::after {
+    position: relative;
+    left: 5px;
+    content:"";
+    display:inline-block;
+    width:15px;
+    height:18px;
+    background:url(../img/red-point.png) no-repeat;
+    background-size:60%;
+  }
+
+  /* End Active Player*/ 
+
+
+/* Winner */
+
+.winner {
+    background: url(../img/Trophyop.png) no-repeat center/cover;
+    
+  }
+
+  .winner .player-name {
+    font-weight: 600;
+    color: #eb4d4d;
+  }
+  .winner .player-name::after {
+      display: none;
+  }
+ 
+  
+  /* End Winner */
+
+  /* Buttons */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+    transition: 0.2s ease-in-out;
+  }
+
+  button:hover {
+    font-weight: 600;
+  }
+  
+  
+  button:focus {
+    outline: none;
+  } 
+
+  /* Style icôns buttons*/ 
+i {
+    color: #eb4d4d;
+    font-size: 120%;
+    margin-right: 7px;
+    padding: 5px;
+    /* border: 2px solid black; */
+    }
+  
+  
+
+
+  /*Bouton new game*/
+
+  .btn-new {
+    top: 97%;
+    /* color: #fff; */
+    /* background-color: #222; */
+    z-index: 200;
+  }
+  
+  
+  
+  /* Roll dice button */ 
+  
+  .btn-roll {
+    top: 55%;
+    left: 18%;
+
+  }
+  
+  
+  /* Hold button*/
+  
+  .btn-hold {
+    top: 55%;
+    left: 80%;
+  }
+  
+  /* End buttons */ 
+  
+  
+  /* The dice */ 
+  .dice {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+  }
+
+
+/* Media-query Pc Screen */
+
+@media all and (min-width: 1024px) and (max-width: 3000px){
+    .title {
+      display: block;
+      text-align: center;
+      font-size: 3rem;
+      color: whitesmoke;
+      margin-top: 50px;
+      margin-bottom: -50px;
+    }
+    .wrapper {
+        flex-direction: row;
+        width: 60%;
+        height: 80%;
+    }
+    .player-name {
+        font-size: 3.2rem;
+    }
+    .player-name::after {
+        height: 150px;
+    }
+
+}
+
+
