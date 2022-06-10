@@ -300,8 +300,15 @@ i {
       left: 50%;
       transform: translate(-50%,-50%);
     }
-    .btn-hold, .btn-roll {
-      top: 95%;
+
+    .btn-hold {
+      top: 65%;
+      left: 50%;
+    }
+
+    .btn-roll {
+      top: 80%;
+      left: 50%;
     }
 
     .dice {
