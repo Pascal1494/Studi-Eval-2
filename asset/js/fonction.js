@@ -127,7 +127,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
   moneyDice();
   setTimeout(() => {
     showRollButton();
-  }, 4000);
+  }, 3500);
 });
 
 // button New game /
@@ -146,7 +146,7 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     showRollButton();
 
     //Si le joueur actif arrive à 100 ou plus, il gagne
-    if (scores[activePlayer] >= 10) {
+    if (scores[activePlayer] >= 100) {
       setInterval(() => {
         document.querySelector(".player-current-score").innerText = "$$$";
       }, 0.1);
