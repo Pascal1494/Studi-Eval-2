@@ -229,6 +229,12 @@ i {
   }
   
   /* End buttons */ 
+
+  /* show hide button on new game*/
+
+  .show-hide {
+    display: none;
+  }
   
   
   /* The dice */ 
@@ -238,6 +244,17 @@ i {
     top: 50%;
     transform: translate(-50%, -50%);
     height: 55px;
+  }
+  .dice-move {
+    position: absolute;
+    width: 20%;
+    transition: 1.2s ease-in-out;
+  }
+
+ 
+  .dice-throw {
+    position: absolute;
+    display: none;
   }
 
 
@@ -308,6 +325,7 @@ i {
     .btn-hold {
       top: 65%;
       left: 50%;
+      z-index: 100;
     }
 
     .btn-roll {
