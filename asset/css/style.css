@@ -113,6 +113,9 @@
   .player-current-score {
     font-size: 20px;
   }
+  .player-current-score-bader {
+    color: #eb4d4d;
+  }
   /* End Score, text and background players / active as inactive*/
   /*Active Player*/
 
