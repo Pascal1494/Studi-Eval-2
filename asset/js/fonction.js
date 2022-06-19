@@ -8,6 +8,7 @@ let playing;
 let scoreBoard;
 let scores;
 let activePlayer;
+let dice;
 
 //Music const
 const diceSong = new Audio("asset/sound/dice3.wav");
@@ -59,11 +60,7 @@ function changePlayer() {
 
   //réinitialization active Player
   activePlayer == 0 ? (activePlayer = 1) : (activePlayer = 0);
-
-  //Display the dice
   document.querySelector(".dice").style.display = "none";
-  //
-
   document.querySelector(".player-0-panel").classList.remove("active");
   document.querySelector(".player-1-panel").classList.remove("active");
   document
@@ -72,6 +69,7 @@ function changePlayer() {
   changePlayerSong.play();
 }
 
+//choice of image following random number
 function resultDice() {
   setInterval(() => {
     document.querySelector(".dice").src = "asset/img/dice-" + dice + ".png";
@@ -79,6 +77,7 @@ function resultDice() {
   document.querySelector(".dice").style.display = "block";
 }
 
+//Animation delay dice ans scores
 function letDice() {
   document.querySelector(".dice-throw").style.display = "none";
   document.querySelector(".dice-throw").style.display = "block";
@@ -93,6 +92,7 @@ function letDice() {
   }, 4500);
 }
 
+// number's function between one and six
 function moneyDice() {
   //Si ce n'est pas = 1
   if (dice != 1) {
@@ -109,7 +109,7 @@ function moneyDice() {
     }, 4000);
   }
 }
-
+// show or hide the roll dice button
 function hiddenRollButton() {
   document.querySelector(".btn-roll").style.display = "none";
 }
@@ -145,9 +145,8 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
     holdSong.play();
     showRollButton();
 
-    //Si le joueur actif arrive à 100 ou plus, il gagne
+    //if the player reaches one hundred points, he wins
     if (scores[activePlayer] >= 100) {
-      
       document
         .querySelector(".player-" + activePlayer + "-panel")
         .classList.add("winner");
@@ -155,8 +154,11 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
       //Show the winner's message
       document.getElementById("name-" + activePlayer).innerText = "Winner !";
       winSong.play();
+      // score in one hundred for players even if score greater than one hundred
+      document.querySelector(".player-current-score").innerText = "0";
       //stop playing
       playing = false;
+      //reset page HTML
       setTimeout(() => {
         location.reload();
       }, 8000);
