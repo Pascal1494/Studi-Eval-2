@@ -127,7 +127,7 @@ document.querySelector(".btn-roll").addEventListener("click", () => {
   moneyDice();
   setTimeout(() => {
     showRollButton();
-  }, 3500);
+  }, 3000);
 });
 
 // button New game /
