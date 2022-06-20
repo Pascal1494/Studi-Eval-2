@@ -13,9 +13,9 @@ let dice;
 //Music const
 const diceSong = new Audio("asset/sound/dice3.wav");
 const holdSong = new Audio("asset/sound/Coin.wav");
-const winSong = new Audio("asset/sound/win.mp3");
-const startSong = new Audio("asset/sound/Jingle-sncf.wav");
-const looseSong = new Audio("asset/sound/percut.wav");
+const winSong = new Audio("asset/sound/win-rvlf.mp3");
+const startSong = new Audio("asset/sound/back-to-the-future.mp3");
+const looseSong = new Audio("asset/sound/voyage.wav");
 const changePlayerSong = new Audio("asset/sound/Whoosh.mp3");
 
 //initialize  function
@@ -83,10 +83,10 @@ function letDice() {
   document.querySelector(".dice-throw").style.display = "block";
   setInterval(() => {
     document.querySelector(".dice-throw").style.display = "none";
-  }, 3400);
+  }, 2500);
   setTimeout(() => {
     resultDice();
-  }, 3500);
+  }, 2500);
   setTimeout(() => {
     document.querySelector(".dice").style.display = "none";
   }, 4500);
@@ -100,13 +100,13 @@ function moneyDice() {
 
     setTimeout(() => {
       document.getElementById("actual-" + activePlayer).innerText = scoreBoard;
-    }, 3500);
+    }, 2500);
   } else {
     //Next player
     setTimeout(() => {
       looseSong.play();
       changePlayer();
-    }, 4000);
+    }, 3000);
   }
 }
 // show or hide the roll dice button
@@ -155,7 +155,8 @@ document.querySelector(".btn-hold").addEventListener("click", () => {
       document.getElementById("name-" + activePlayer).innerText = "Winner !";
       winSong.play();
       // score in one hundred for players even if score greater than one hundred
-      document.querySelector(".player-current-score").innerText = "0";
+      document.getElementById("actual-0").innerText = "0";
+      document.getElementById("actual-1").innerText = "0";
       //stop playing
       playing = false;
       //reset page HTML
