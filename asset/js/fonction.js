@@ -13,7 +13,7 @@ let dice;
 //Music const
 const diceSong = new Audio("asset/sound/dice3.wav");
 const holdSong = new Audio("asset/sound/Coin.wav");
-const winSong = new Audio("asset/sound/win-rvlf.mp3");
+const winSong = new Audio("asset/sound/Doubleback.mp3");
 const startSong = new Audio("asset/sound/back-to-the-future.mp3");
 const looseSong = new Audio("asset/sound/voyage.wav");
 const changePlayerSong = new Audio("asset/sound/Whoosh.mp3");
