@@ -15,3 +15,9 @@ Lors de son tour, le joueur peut décider à tout moment de : - Cliquer sur l’
 
 Avant de coder dans la section Javascript, J’ai décidé de faire un cahier des charges pour définir les besoins pour réaliser cet execise.
 Je passe rapidement sur la création du visuel en HTML et CSS. Je n’ai pas utilisé de Framework comme Bootstrap, Materialize ou encore Bulma, mais en CSS pur.
+
+J’ai juste utilisé le CDN de Bootstrap pour les icônes qui sont parfaite et correspondent au visuel demandé. J’ai juste rajouté des animations de dé et des sons. 
+J’ai également utilisé la police Lato de Google Font
+Lato (google font) : 
+https://fonts.google.com/specimen/Lato
+
